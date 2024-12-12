@@ -1,0 +1,61 @@
+---
+title: "Initial Project  Plan"
+format: pdf
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+
+
+```
+
+## Quarto
+
+# Group Members
+
+-   Kidus Assefa
+
+-   Ibrahima Ka
+
+-   Ishmael Efejuku
+
+# Title
+
+## What factors effect your income in Minnesota?
+
+# Purpose
+
+We'd like to explore the connection between different identities (such as race/ethnicity, gender and birthplace) and income in the state of Minnesota. Some focused questions that we would like to answer a, what are the disparities between cities, and does race/ethnicity play a statistically significant factor in those disparities? Is there a change in recent years in terms of the past trend and what does that mean in practical terms (ex. are some areas potentially being gentrified and what does that mean?).
+
+It's useful to have a model for our response variable to see how much does different identites affect income in Minnesota, if at all. The predictions would be useful in context because of how closely the model fits the data we are trying to predict. We would use Minnesota data to make predictions on Minnesota, which is practical and makes sense. We hypothesize that income will have a changing relationship depending on what identity/identities is/are being compared. For instance white individuals in Minnesota may show higher trends regarding income than their non-white counterparts. We also hypothesize that cities with higher white demographics will have better income than cities with lower white demographics.
+
+# Data
+
+<https://usa.ipums.org/usa-action/data_requests/download>
+
+This is the primary data source that we'd like to utilize in our project. It allows you to create your own data set based on samples and variables that you selected. We made a data set but we don't know if we created the data set correctly.
+
+We created a dataset in ipums of individuals in the US with age, sex, race, state, county, place of birth(in or out of US) and employment status. We filtered the dataset to only gives us Obs. units in Minnesota
+
+```{r}
+
+
+demo <- read_csv("dataset" , na = c("","NA",9999999))
+```
+
+# Population
+
+The observational units will be people, specifically people in Minnesota.
+
+# Response Variable
+
+Our response variable would be income and it would probably be broken up into three main categories, lower class, middle-class and upper class and *possible* sub-categories (upper-middle-class, lower-middle-class)
+
+# Explanatory Variables
+
+Explanatory variables would be race, age, if they were born in the US, ethnicity, gender, employment, and county in MN they live in. and others depending on what the created IPUMS dataset allows.
+
+```{r}
+data(usa_00001.dat)
+```
